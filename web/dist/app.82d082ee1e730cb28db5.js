@@ -1,0 +1,1 @@
+webpackJsonp([1],{170:function(e,t,n){"use strict";function l(e){return e&&e.__esModule?e:{default:e}}var u=n(45),a=l(u),d=n(51),o=l(d);new XMLHttpRequest;o.default.render(a.default.createElement("h1",null,"Hello World, Tiago!"),document.getElementById("app"))}},[170]);
