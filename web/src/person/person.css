@@ -1,39 +1,12 @@
-.button.right{
-    background-color: red;
-    color: white;
-    padding: 6px;
-    border: 1px solid red;
-    border-radius: 3px;
-    margin-top: 3px;
-    float: right;
+.hide {
+    display: none;
 }
 
-.form {
-    width: 40%;
-    margin: 0 auto;
-    padding-top: 50px; 
+.row {
+    margin-bottom: 4%; 
 }
 
-.input-box {
-    width: 45%;    
-}
-
-.input-box .input-label {
-    padding-top: 7px;
-    float: left;
-}
-
-.input-box .input-text {
-    padding: 4px;
-    float: right;
-}
-
-.input-box:after {
-    content: " ";
-    display: block;
-    clear: both;
-}
-
-table {
-    padding: 50px;
+label {
+    font-weight: normal !important;
+    font-size: 14px;
 }

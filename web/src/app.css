@@ -3,13 +3,11 @@
     font-size: 12px;    
 }
 
-.container {
-    width: 75%;
-    margin: 0 auto;
-    border: 1px gray solid;
-    min-height: 450px;    
-    box-shadow: .25em .25em .25em rgba(0, 0, 0, 0.3);
+.jumbotron {
+    background-color : white;
+    border : 3px solid #eee;
 }
+
 
 
 

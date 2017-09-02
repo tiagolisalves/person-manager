@@ -1,57 +1,45 @@
 import React from 'react';
 
 export default function(context){
-
-    const result = context.state.result && 
-                    <table>
-                        <thead>
-                        <tr>
-                            {Object.keys(JSON.parse(context.state.result)).map(function(key, index, element, ele) {
-                                return (<th key={key + index}>
-                                    {key}
-                                </th>)
-                            })}
-                        </tr>
-                        </thead>
-                        <tbody>
-
-                        <tr>
-                            {Object.values(JSON.parse(context.state.result)).map(function(value, index){
-                                return (
-                                <td key={value + index}>
-                                    {value}
-                                </td>
-                                )
-                            })}
-                        </tr>
-                        </tbody>
-                    </table>
-                ;
-
-
     return (
-            <div className="form">
-                <InputText align="placeASide" label="Name:" field="name" handleChange={context.associateInput}/>
-                <InputText align="placeASide" label="Age:" field="age" handleChange={context.associateInput}/>
-                <InputText align="placeASide" label="Address:" field="address" handleChange={context.associateInput}/>
-                <InputText align="placeASide" label="Sex:" field="sex" handleChange={context.associateInput}/>                
-                <input value='Add Person' onClick={context.request}  className="button right" type="button"/>
-                {result}
-                
+            <div className="">
+                <GeneralInfo handleChange={context.associateInput} />
+                <input value='Register' onClick={context.request}  className="btn btn-primary pull-right mt-md" type="button"/>                          
             </div>
         )
 }
 
-function InputText(props){
+function GeneralInfo(props){
 
     return (
-        <div className="input-box">
-            <div className="input-label">
-                {props.label}
-            </div>
-            <div className="input-text">
-                <input type="text" data-field={props.field} onChange={props.handleChange} />
-            </div>
-        </div>    
+        <form action="">
+            <fieldset>
+                <legend>General Info</legend>                
+                <div className="row">
+                    <div className="col-md-6">
+                        <label htmlFor="name">Name</label>
+                        <input type="text" id="person-name" data-field="name" className="form-control" onChange={props.handleChange}/>
+                    </div>
+                    <div className="col-md-3">
+                        <label htmlFor="person-address">Address</label>
+                        <input type="text" id="person-address" data-field="address" className="form-control" onChange={props.handleChange}/>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-3">
+                        <label htmlFor="person-age">Age:</label>
+                        <input type="text" id="person-age" data-field="age" className="form-control" onChange={props.handleChange}/>
+                    </div>
+                    <div className="col-md-3" >
+                        <label htmlFor="person-sex">Sex</label>
+                        <select className="form-control" data-field="sex" id="person-sex" onChange={props.handleChange}>
+                            <option className="hide"></option>
+                            <option>Male</option>
+                            <option>Female</option>                          
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     );
 }
