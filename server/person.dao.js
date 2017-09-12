@@ -3,8 +3,8 @@ import { Pool, Client } from 'pg';
 const client = new Client({
     user: 'postgres',
     host: 'localhost',
-    database: 'person-manager',
-    password: 'fhardfl1p.,',
+    database: '',
+    password: '',
     port: 5432,
 })
 
