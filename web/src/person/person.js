@@ -15,11 +15,10 @@ export default class Person extends React.Component {
             sex : undefined
         }
         this.request = this.request.bind(this);
-        this.associateInput = this.associateInput.bind(this);
+        this.setGeneralInfo = this.setGeneralInfo.bind(this);
     }
 
     request(){
-        console.log(this.state);
         Http.post("http://localhost:3000/person", this.state).then((response) => {
             this.setState({
                 result : JSON.parse(response)
@@ -27,11 +26,8 @@ export default class Person extends React.Component {
         });
     }
 
-    associateInput(event){    
-        const object = {};
-        object[event.target.dataset.field] = event.target.value;    
-        console.log(object);
-        this.setState(object);
+    setGeneralInfo(event){    
+        this.setState({[event.target.dataset.field] : event.target.value});
     }
 
     render(){

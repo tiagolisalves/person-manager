@@ -3,7 +3,7 @@ import React from 'react';
 export default function(context){
     return (
             <div className="">
-                <GeneralInfo handleChange={context.associateInput} />
+                <GeneralInfo handleChange={context.setGeneralInfo} />
                 <input value='Register' onClick={context.request}  className="btn btn-primary pull-right mt-md" type="button"/>                          
             </div>
         )

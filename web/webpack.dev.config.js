@@ -5,7 +5,7 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({ template: 'src/index.html'
 const src = './src';
 
 module.exports = {
-    entry: src + '/app.js',
+    entry: src + '/index.js',
     devtool: 'inline-source-map',
     output: {
         filename: 'bundle.js',

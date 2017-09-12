@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "back-server": "nodemon server/index.js --exec babel-node --presets es2015 &",
     "front-build": "cd web && webpack",
-    "front-server": "cd web && webpack-dev-server --open --inline --hot &",
+    "front-server": "cd web && webpack-dev-server --open --history-api-fallback --inline --hot &",
     "serve-build": "cd web && webpack-dev-server --open",
     "dev": "run-p back-server front-server"
   },
@@ -22,6 +22,7 @@
     "pg": "^7.2.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-dom": "^4.2.2",
     "rxjs": "^5.4.3"
   },
   "devDependencies": {
