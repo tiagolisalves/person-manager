@@ -17,7 +17,10 @@ export default React.createClass({
                 <div className="jumbotron">
                     <Switch>
                         <Route path='/register' component={Person}/>
-                        <Route render={() => {return (<div>I'm a Person</div>)}}/>
+                        <Route path='/search' component={Person}/>
+                        <Route path='/update' component={Person}/>
+                        <Route path='/delete' component={Person}/>
+                        <Route render={() => {return (<h1>Welcome to the Person Manager app, here you can make opearations over your favorite person, enjoy!</h1>)}}/>
                     </Switch>
                 </div>
             </div>
