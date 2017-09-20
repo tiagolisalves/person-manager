@@ -12,7 +12,7 @@ function httpRequest() {
 
                 http.onreadystatechange = () => {
                     if(http.status == 200 && http.readyState == 4){ 
-                        resolve(JSON.stringify(http.response));                        
+                        resolve(http.response);                        
                     } else if(http.status >= 400){
                         reject(http.responseText);
                     }
@@ -26,7 +26,7 @@ function httpRequest() {
         post: function(url, config){
             return templateMethod("POST", url, true, config);
         },
-        get : function(){
+        get : function(url){
             return templateMethod("GET", url, true);
         }
     }

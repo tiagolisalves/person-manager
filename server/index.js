@@ -13,7 +13,12 @@ app.route('/person')
     .post((req, res) => {
         PersonDAO.create(req.body);           
 }).get((req, res) => {
-        PersonDAO.read(req.params.name);
+    PersonDAO.read().then((result) => {
+        console.log(result);
+        res.send(result.rows);
+    }).catch((err) => {
+        res.send(err);
+    });
 });
 
 app.listen(3000, () => {
