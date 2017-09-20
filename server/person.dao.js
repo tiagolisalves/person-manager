@@ -1,12 +1,5 @@
 import { Pool, Client } from 'pg';
-
-const connectionConfig = {
-    user: 'postgres',
-    host: 'localhost',
-    database: 'person-manager',
-    password: '',
-    port: 5432,
-};
+import connectionConfig from './database-config';
 
 const PersonDAO = {
     create : (person) => {
